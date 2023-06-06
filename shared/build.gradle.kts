@@ -28,6 +28,13 @@ kotlin {
         framework {
             baseName = "shared"
         }
+
+        pod("Sentry") {
+            extraOpts = listOf("-compiler-option", "-DSentryMechanismMeta=SentryMechanismMetaUnavailable")
+            source = git("https://github.com/getsentry/sentry-cocoa.git") {
+                tag = "8.7.2"
+            }
+        }
     }
     
     sourceSets {
