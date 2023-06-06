@@ -40,7 +40,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                //put your multiplatform dependencies here
+                implementation("com.rickclephas.kmp:nsexception-kt-sentry:0.1.7")
             }
         }
         val commonTest by getting {
